@@ -26,6 +26,7 @@ import askov.schoolprojects.cg.coloris.sprites.LabeledValue;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.animation.ParallelTransition;
+import javafx.scene.canvas.GraphicsContext;
 
 /**
  *
@@ -321,4 +322,14 @@ public class GameLogic {
         return squareDestruction;
     }
 
-}
+
+    public void drawNextBlock(GraphicsContext gc) {
+        if (nextBlock != null) {
+            double previewX = squareMatrix.getTranslateX() + squareMatrix.getWidth() + 40;
+            double previewY = squareMatrix.getTranslateY();
+            nextBlock.setTranslateX(previewX);
+            nextBlock.setTranslateY(previewY);
+            nextBlock.update(); // corrige posição dos quadrados
+        }
+    }
+    }
