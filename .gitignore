@@ -1,6 +1,25 @@
-# Ignore Gradle output files
-.gradle/
-build/
-
-# Ignore IDE-specific files
+# IDEs
 .idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+
+# Build
+/build/
+out/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporários
+*.zip
+*.tmp
+
+# Bat executáveis
+*.bat

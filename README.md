@@ -1,33 +1,38 @@
-# Coloris
+# Coloris Game
 
-[![CodeFactor](https://www.codefactor.io/repository/github/danijelaskov/coloris/badge/master)](https://www.codefactor.io/repository/github/danijelaskov/coloris/overview/master)
-![Build with Gradle](https://github.com/DanijelAskov/coloris/actions/workflows/gradle.yml/badge.svg)
+🎮 **Coloris** é um jogo Java com JavaFX que simula uma variação de Tetris, com funcionalidades visuais aprimoradas como o preview do próximo bloco.
 
-![Gameplay demonstration](demo/gameplay.gif)
+## ✅ Requisitos
 
-## Inspiration
+- Java 17 (instale via [Eclipse Temurin JDK 17](https://adoptium.net))
+- JavaFX SDK 17+
+- Gradle (ou use o `gradlew.bat` incluso)
 
-A 2D JavaFX application inspired by *Coloris*, a single-player puzzle video game, that was originally released in 1990, for *Commodore Amiga* family of personal computers.
+## 🧭 Como Rodar
 
-## Setup
+### Windows
+1. Execute o arquivo:
+   ```
+   1-Iniciar Jogo.bat
+   ```
 
-This project contains an embedded [Gradle](https://docs.gradle.org/current/userguide/userguide.html) to build the project. 
-From the command line, run `gradlew run` (Windows) or `./gradlew run` (macOS and Linux) to download the Gradle wrapper and dependencies, compile the code, and launch the game.
+### Manual
+Ou, via terminal/cmd:
+```bash
+gradlew.bat clean build run
+```
 
-## Gameplay
+## 📁 Estrutura
 
-The gameplay bears resemblance to *Tetris* and *Columns*: blocks, consisting of three randomly colored squares, fall from the top of the screen to a well.
-**Orientation** of the blocks **cannot be changed**, but the squares within them can be **shifted circularly** (<kbd>↑</kbd> navigation key).
-The falling block **can be moved horizontally** in both directions (<kbd>←</kbd> and <kbd>→</kbd> navigation keys), and its falling **can be sped up** (<kbd>↓</kbd> navigation key).
-Once the block hits bottom of the well, or another block, the following rule is applied: if **three or more** squares of the **same** color are **adjacent**, they **disappear**, blocks **above** them **fall down**, which **may trigger a chain reaction**. If five or more squares disappear, bottom row disappears, regardless of colors of the squares within it.
+- `src/` - Códigos-fonte Java
+- `build.gradle` - Configurações do Gradle
+- `1-Iniciar Jogo.bat` - Executável rápido
+- `push_coloris_nextblock.bat` - Automatiza push Git
 
-## Fonts and audio
+## 🚀 Funcionalidade Extra
 
-Font used for the game logo, *game over* label and *score* label can be found [here](https://www.dafont.com/computerfont.font).
-*Score counter* font can be found [here](https://www.dafont.com/digital-7.font).
-Audio was extracted from [this YouTube video](https://www.youtube.com/watch?v=BLX5HAIlRLs&feature=youtu.be&t=9m15s).
+- ✅ Visualização do próximo bloco (implementada em `GameLogic.java`)
 
-## Note to the reader of this README
+---
 
-If you have any question, suggestion or collaboration offer, please feel free to [contact me](mailto:danijel.askov@gmail.com).
-**If you find this repository useful, please consider starring it!**
+Desenvolvido com ❤️ por [Demetrios00](https://github.com/Demetrios00)
