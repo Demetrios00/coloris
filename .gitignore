@@ -23,3 +23,4 @@ Thumbs.db
 
 # Bat executáveis
 *.bat
+.gradle/

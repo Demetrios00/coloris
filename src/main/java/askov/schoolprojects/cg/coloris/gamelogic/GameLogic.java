@@ -397,13 +397,12 @@ public class GameLogic {
         comboCount++;
         if (comboCount >= COMBO_THRESHOLD_FOR_EXPLOSION && !specialPowerActive) {
             specialPowerActive = true;
-            int rowIndex = (int) (Math.random() * squareMatrix.getNumRows());
+            int rowIndex = squareMatrix.getNumRows() - 1; // Explode sempre a última linha
             explodeLine(rowIndex);
             comboCount = 0;
         }
     }
 
-    // Deve ser chamado se nenhuma eliminação foi feita
     private void resetComboCounter() {
         comboCount = 0;
     }
